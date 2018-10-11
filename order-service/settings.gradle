@@ -1,1 +1,4 @@
 rootProject.name = 'order-service'
+include ':application-spring-boot-starter'
+project(':application-spring-boot-starter').projectDir = new File("C:/Tech Buzz/SPRING_MICROSERVICES/application-spring-boot-starter")
+//project(':application-spring-boot-starter').projectDir = new File("/application-spring-boot-starter")
