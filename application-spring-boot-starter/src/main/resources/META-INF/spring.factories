@@ -1,0 +1,7 @@
+#Bootstrap components
+org.springframework.cloud.bootstrap.BootstrapConfiguration=com.application.common.config.CustomPropertySourceLocator
+
+#AutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.application.common.config.HelloConfiguration
+
+#Application Listeners
