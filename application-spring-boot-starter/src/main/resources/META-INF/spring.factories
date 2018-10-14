@@ -5,3 +5,7 @@ org.springframework.cloud.bootstrap.BootstrapConfiguration=com.application.commo
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.application.common.config.HelloConfiguration
 
 #Application Listeners
+org.springframework.context.ApplicationListener=com.application.common.listeners.EnvironmentApplicationListener
+
+#Failure Analyzers
+org.springframework.boot.diagnostics.FailureAnalyzer=com.application.common.exception.ApplicationFailureAnalyzer

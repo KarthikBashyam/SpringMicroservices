@@ -4,14 +4,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.cloud.config.environment.Environment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.orders.dao.repository.OrderRepository;
 import com.orders.entity.Orders;
 
-@SpringBootApplication(scanBasePackages="com.orders")
+@SpringBootApplication(scanBasePackages = "com.orders")
 @EnableJpaRepositories(basePackages = "com.orders")
 @EntityScan(basePackages = "com.orders.entity")
 public class OrderServiceApplication {
@@ -33,13 +32,5 @@ public class OrderServiceApplication {
 			orderRepository.save(new Orders("Bulk Order"));
 		};
 	}
-	
-	@Bean
-	CommandLineRunner testEnvironment(Environment environment) {
-		return args -> {
-			System.out.println("============= ENVIRONMENT PROPERTY SOURCES =================");
-			environment.getPropertySources().forEach(ps -> System.out.println(ps.getName()));
-		};
-	}
-	
+
 }
