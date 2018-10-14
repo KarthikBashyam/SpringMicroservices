@@ -8,4 +8,4 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.application.c
 org.springframework.context.ApplicationListener=com.application.common.listeners.EnvironmentApplicationListener
 
 #Failure Analyzers
-org.springframework.boot.diagnostics.FailureAnalyzer=com.application.common.exception.ApplicationFailureAnalyzer
+org.springframework.boot.diagnostics.FailureAnalyzer=com.application.common.exception.ConfigNotFoundFailureAnalyzer
