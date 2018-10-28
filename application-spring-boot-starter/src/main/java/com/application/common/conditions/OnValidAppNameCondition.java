@@ -16,7 +16,7 @@ public class OnValidAppNameCondition extends SpringBootCondition {
 
 		Environment environment = context.getEnvironment();
 
-		ConditionMessage.Builder condition = ConditionMessage.forCondition("ValidAppName");
+		ConditionMessage.Builder condition = ConditionMessage.forCondition(ConditionalOnValidAppName.class);
 
 		if (environment.containsProperty(PROPERTY_NAME)) {
 			String appName = environment.getProperty(PROPERTY_NAME);
